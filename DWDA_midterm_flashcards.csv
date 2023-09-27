@@ -1,0 +1,123 @@
+﻿Front;Back
+OSEMN framework;Obtain, Obtain, Scrub, Explore, Model, iNterpret
+CRISP-DM;Cross Industry Standard Process for Data Mining
+KDD Process;Knowledge Discovery in Databases
+Data Wrangling;An iterative process to convert the raw data into a more understandable format. Discovering, Structuring, Cleaning & Transformation, Enriching, Validating, Publishing
+Discovering in the Data Wrangling process;Understanding the data with respect to the application. Creating a plan for preparing the data.
+Structuring in the Data Wrangling process;Defining a structure that suits the analytical model. Various datasets should be in compatible formats. Data may come from different sources (Union, Join)
+Transformation and Cleaning in the Data Wrangling process;Normalizing the data, removing redundant and irrelevant data, combining multiple datasets. Removing errors, de-duplication, fixing inaccuracies and inconsistencies, and handling data bias.
+Enriching in the Data Wrangling process;Do you have the required data to perform accurate analysis? If the data is not enough, can we add more examples/features? Enriching with synthetic data?
+Validating in the Data Wrangling process;Confirm wether the steps that were done during the structuring, transformation and cleaning are correct or not
+Publishing in the Data Wrangling process;Choose file format. Store the data where it can be accessed by others. Consider data privacy.
+Data Formats;Structured Data, Unstructured Data, Semistructred Data
+Metadata;Data about data (describes context, attributes and domains, how it was collected and where it is stored, how it can be used)
+Data Models;Mathematical representation of the data. Collection of tools describing relationships, semantics, constraints, operations.
+Relational Model;Uses tables to represent both data and relationships
+Entity-Relationship (E-R) model;Data is represented as a collection of entities (real-world objects) and the relationship among the objects)
+Semistructured model;different objects may have different sets of attributes (e.g. JSON and XML)
+Object-Based data model;entities (real-world objects) are represented using objects
+Main Components of a Data Model;Structures (define the format), Constraints (define the relationships and semantics), Operations (store and retrieve the data)
+Parts of the Relational Model;Instance (a table, with rows and columns), Schema (specifies name of relation, plus name and type of each column)
+Types of keys;Superkey, Candidate key, Primary key, Foreign key
+Superkey;A set of attributes that uniquely identifies each tuple of a relation
+Candidate key;A minimal superkey
+Primary key;A column in a relational database table that's distinctive for each record
+Foreign key;A column or columns of data in one table that refers to the unique data values -- often the primary key data -- in another table
+Attribute Types;Domain (set of allowed value for each attribute), Atomic (Attribute values are normally required to be atomic, indivisible), Null (a member of every domain indicating that the value is unknown)
+Constraints;Guard against accidental damage to the data, Ensure that authorized changes to the data do not violate consistency
+Drawback of file system as data storage;Data redundancy and inconsistency, Difficulty in accessing data, Data isolation, Integrity problems, Atomicity of updates, Concurrent access by multiple users, Security problems. Database systems offer solutions to all these problems.
+Databases;Traditionally: systems that contain records about real world entities Today: covers all the largest sources of data (web search, data mining, etc.)
+Database levels of abstraction;Physical level (describes how a record is stored), Logical level (describes data stored in database, and the relationships among the data), View level (application programs which hide details of data types)
+Data Definition Language (DDL);Specification notation for defining the database schema. Is used to create and modify database objects such as tables indexes and users.
+Data Manipulation Language (DML);Language for accessing and manipulating the data organized by the appropriate data model. Also known as query language to retrieve information from the database.
+Structured Query Language (SQL);"High level language to manipulate relational data. DBMS figures out ""best"" way to execute query"
+∪;Union
+∩;Intersection
+−;Difference
+σ;Selection
+π;Projection
+×;Cartesian product
+⋈;Natural join
+ρ;Rename
+δ;Duplicate elimination
+γ;Grouping and aggregation
+τ;Sorting
+lossless decomposition;decomposed relations can be joined together to the original relation
+Functional dependence (FD);the values of a set of attributes X determine the values of another set of attributes Y
+Armstrong's axioms;a set of references used to infer all the functional dependencies on a relational database
+Reflexivity axiom;If X ⊆ Y, then Y ⟼ X
+Augmentation axiom;If X ⟼ Y, then AX ⟼ AY
+Transivity axiom;If X ⟼ Y and Y ⟼ W, then X ⟼ W
+First normal form (1NF);Relation contains only atomic values (no multiple values in one cell)
+Second normal form (2NF);Relation is in 1NF and all non-key attributes are fully functional dependent on the primary key
+Third normal form (3NF);Relation is in 2NF and there is no transitive dependency
+Boyce Codd Normal Form (BCNF);Relation is in 3NF and for functional dependency X−>Y, X must be a Super Key
+Heterogeneous/heterogeneity;Consisting of dissimilar or diverse elements
+Levenshtein distance;Minimum number of single-character edits required to change one string into the other
+Jaro Similarity;JaroSim(S1,S2)=1/3(C/S1+C/S2+(C-T)/C), C=number of common characters, T=number of transpositions/2, S1 and S2 = respective lengths of the strings
+Jaro-Winkler Similarity;Jw(S1,S2)=JaroSim*P*L*(1-JaroSim),P=Scaling factor (0.1 default), L=length of common prefix up to maximum 4
+Soundex;Phonetic algorithm that indexes names by their sounds when pronounced in  English
+Jaccard Similarity;Finds the similarity between sets by dividing the intersection over the union
+Jaccard Distance;Finds the dissimilarity (or distance) between sets by dividing de difference over the union
+Sørensen Coefficient;Finds the similarity between sets by dividing the intersection over the total number of elements
+Overlap Coefficient;Finds the similarity between sets by dividing the intersection over the amount of elements of the set with the least amount of elements
+Tversky Index;A generalized form of Jaccard and Sørensen
+k-shingle (or k-gram);Sequence of k tokens that appears in the documents (tokens can be characters, words, etc.)
+Shingling;Converts documents to sets
+Min-hashing;Converts large sets to short signatures, while perserving similarity
+Locality-Sensitive Hashing;Focuses on pairs of signatures likely to be from similar documents (candidate pairs)
+Data Preparation;The process of cleaning and transforming raw data prior to precessing and analysis
+Handling Missing Data;Ignore, Fill in (manually, automatically (global constant, mean, etc.))
+Noisy Data;Data with random error or variance in a measured variable
+Handling Noisy Data;Binning, Regression, Clustering, Combined computer and human inspection
+Equidepth / Equal-frequency bins;Each bin has same amount of elements and different range
+Equidistance / Equal-width bins;Each bin has same range and different amount of elements
+Outlier;Observation which deviates so much from other observations as to arouse suspicions that it was generated by a different mechanism
+Types of outliers;Global, contextual, collective
+Global outlier;Deviates significantly from the rest of the dataset
+Contextual outlier;Deviates significantly based on a selected context
+Collective outliers;A subset of data objects collectively deviate significantly from the whole data set
+Outlier Detection Approaches;Statistical approach, Distance-based approach, Density-based approach, Model-Based approach
+Outlier Detection: Statistical Approach;Assume that objects in a dataset are generated by a stochastic process. Parametric method (specific distribution, calculate probability), Non-parametric mehotd (Doesn't assume a model but determines the model from the input data (examples: histogram method))
+Outlier Detection: Distance-Based Approach;Judge a point based on the distance to its neighbors. Assumptions: normal data objects have a dense neighbourhood, outliers are far apart from their neighbors
+Outlier Detection: Density-Based Approach;Compare the density around a point with the density around its local neighbors. Assumptions: The density around a normal data object is similar to the density around its neighbors, the density around an outlier is considerably different to the density around its neighbors
+Local Outlier Factor (LOF);Quantifies the local density of a data point, with the use of a neighborhood of size k
+Data Transformation;A function that maps the entire set of values of a given attribute to a new set of replacement values s.t. each old value can be identified with one of the new values
+Methods for data transformation;Smoothing, Attribute/feuture construction, Aggregation, Normalization, Data reformatting, Use the same unit
+Data normalization methods;Min-max normalization, Z-score normalization, Decimal scaling normalization
+Min-Max Normalization;Transform the data from a given range to a new interval. v' = (v-min)/(max-min)(new_max-new_min)+new_min
+Z-score Normalization;Transform the data by converting the values to a common scale with an average of zero and a standard deviation of one. v' = (v-mean)/standard_deviation
+Decimal Scaling Normalization;Transform the data by moving the deimal points of values of attribute A. The number of decimal points moved depends on the maximum absolute value. v' = v/(10^j), where j is the smallest integer such that max(|v'|) < 1.
+Data Integration;Combines data from multiple sources into a coherent store
+Entity Resolution;identifying and linking/grouping different representations of the same real-world object
+Data Reduction;Obtain a reduced representation of the dataset
+Principal Component Analysis (PCA);Dimensionality reduction by finding a projection that captures the largest amount of variation in data. Works for numeric data only.
+Attribute Subset Selection;Dimensionality reduction by removing redundant attributes and removing irrelevant attributes
+Model-Based Data Reduction;Data reducttion by modeling to a straight line (linear regression, multiple regression, log-linear model)
+Histogram for Data Reduction;Divide data into buckets and store the average for each bucket
+Clustering-Based Data Reduction;Partition dataset into clusters based on similarity, and store cluster representation
+Sampling-Based Data Reduction;Obtain a small sample to represent the whole dataset
+Types of sampling;Simple random sampling, Sampling without replacement, Sampling with replacement, Stratified sampling
+Simple random sampling;Equal probability of selecting any particular item
+Sampling without replacement;Once an object is selected, it is removed from the population
+Sampling with replacement;A selected object is not removed from the population
+Stratified sampling / Cluster sampling;Partition the dataset, and draw samples from each partition. Used in conjunction with skewed data.
+Concept Hierarchy Generation;Each level of the hierarchy represents a concept that is more general than the level below it. Some hierarchies can be automatically generated based on the analysis of the number of distinct values per attribute in the data set
+Data Discretization;Divide the range of a continuous attribute into intervals
+Data Discretization Methods;Binning, Clustering, Classification, Correlation
+5Vs of Big Data;Big Data Characteristics: Volume, Variety, Velocity, Veracity, Value
+Big Data: Volume;Volume of data that needs to be processed is increasing rapidly
+Big Data: Variety;Various formats, types, and structures
+Big Data: Velocity;Data is generated fast and hence needs fast processing
+Big Data: Veracity;Consistence, accuracy, quality, and trustworthiness
+Big Data: Value;Useful data in form of unique insights
+Cloud Computing;A compilation of technologies, packaged within a infrastructure paradigm that offers improved scalability, elasticity, business agility, faster startup time, reduced management costs and just-in-time availability of resources
+Characteristic Pillars of Cloud Computing;Efficiency, Accessibility, Ultra-Reliability, On-demand, Elasticity, Scalability, Sustainability
+Cloud Deployment Models;Public Cloud, Private Cloud, Hybrid Cloud, Community Cloud
+Public Cloud;Cloud infrastructure available to all, owned by a large organisation responsible for control of data and operations
+Private Cloud;Cloud infrastructure for and managed by the organisation or a third party
+Hybrid Cloud;A combination of two or more public and private clouds federated by standardised protocol
+Community Cloud;Cloud infrastructure shared by several organisations with similar business goals
+Infrastructure-as-a-Service (IaaS);Provider controls the infrastructure (servers, storage, networking, etc.), Customer Controls applications, security, databases, etc.
+Platform-as-a-Service (PaaS);Provider controls the platform, Customer controls the applications they run on the platform
+Software-as-a-Service (SaaS);Provider controls everything, customer consumes the software
