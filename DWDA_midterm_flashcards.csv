@@ -1,5 +1,5 @@
-﻿Front;Back
-OSEMN framework;Obtain, Obtain, Scrub, Explore, Model, iNterpret
+Front;Back
+OSEMN framework;Obtain, Scrub, Explore, Model, iNterpret
 CRISP-DM;Cross Industry Standard Process for Data Mining
 KDD Process;Knowledge Discovery in Databases
 Data Wrangling;An iterative process to convert the raw data into a more understandable format. Discovering, Structuring, Cleaning & Transformation, Enriching, Validating, Publishing
@@ -13,7 +13,7 @@ Data Formats;Structured Data, Unstructured Data, Semistructred Data
 Metadata;Data about data (describes context, attributes and domains, how it was collected and where it is stored, how it can be used)
 Data Models;Mathematical representation of the data. Collection of tools describing relationships, semantics, constraints, operations.
 Relational Model;Uses tables to represent both data and relationships
-Entity-Relationship (E-R) model;Data is represented as a collection of entities (real-world objects) and the relationship among the objects)
+Entity-Relationship (E-R) model;Data is represented as a collection of entities (real-world objects) and the relationship among the objects
 Semistructured model;different objects may have different sets of attributes (e.g. JSON and XML)
 Object-Based data model;entities (real-world objects) are represented using objects
 Main Components of a Data Model;Structures (define the format), Constraints (define the relationships and semantics), Operations (store and retrieve the data)
