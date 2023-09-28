@@ -121,3 +121,11 @@ Community Cloud;Cloud infrastructure shared by several organisations with simila
 Infrastructure-as-a-Service (IaaS);Provider controls the infrastructure (servers, storage, networking, etc.), Customer Controls applications, security, databases, etc.
 Platform-as-a-Service (PaaS);Provider controls the platform, Customer controls the applications they run on the platform
 Software-as-a-Service (SaaS);Provider controls everything, customer consumes the software
+Grammar of Graphics;Map raw data to: Aesthetics, Geometric objects, Scales, Facets. Additionaly can apply: Statistical transformation, Coordinate system
+Aesthetics in the Grammar of Graphics;Position, Shape, Color, etc.
+Geometric objects in the Grammar of Graphics;Point, Lines, Bars, etc.
+Scales in the Grammar of Graphics;Continuous, Discrete, etc.
+Facets in the Grammar of Graphics;Small multiples (subplots)
+Statistical transformation in the Grammar of Graphics;Identity, Binning, Median, etc.
+Coordinate system in the Grammar of Graphics;Cartesian, Polar, Parallel, etc.
+Tufte data to ink ratio principle;"The ratio between the amount of information the plot shows and the amount of ""ink"" being used, principle is to maximize this ratio (within reason)"
