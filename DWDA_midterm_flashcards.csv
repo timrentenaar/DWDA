@@ -129,9 +129,14 @@ Scales in the Grammar of Graphics;Continuous, Discrete, etc.
 Facets in the Grammar of Graphics;Small multiples (subplots)
 Statistical transformation in the Grammar of Graphics;Identity, Binning, Median, etc.
 Coordinate system in the Grammar of Graphics;Cartesian, Polar, Parallel, etc.
+Gestalt principles of relatedness;Proximity, Smilarity, Connection, Continuity, Closure, Figure and ground, Common fate
 Tufte data to ink ratio principle;"The ratio between the amount of information the plot shows and the amount of ""ink"" being used, principle is to maximize this ratio (within reason)"
 Types of analysis;Exploratory Analysis and Confirmatory Analysis
 Exploratory Analysis;Generate new insights, Create new hypotheses, Analysis may depend on data
 Confirmatory Analysis;Test theory, A priori hypotheses, Analysis predefined
 Tukey's approach to EDA;"Look at center and spread. Find comparisons. ""Straightening and flattening"": use logarithms and other transforms, use models and residuals"
 Peng's EDA checklist;"1. Formulate your question, 2. Read in your data, 3. Check the packaging, 4. Look at the top and bottom of your data, 5. Check your ""n""s, 6. Validate with at least one external source, 7. Try the easy solution first, 8. Challenge your solution, 9. Follow up"
+ML definition;Learns from experience E with respect to task T and performance measure P
+Supervised learning;learn a model from labeled training data, then make predictions
+Unsupervised learning;explore the structure of the data to extract meaningful information
+Reinforcement Learning;develop an agent that improves its performance based on interactions with the environment
