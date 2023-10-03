@@ -1,3 +1,11 @@
+# Read me
+This repository contains
+- a cheat sheet that can be used during the midterm exam
+- flashcard that can be used to memorize material for the midterm exam
+
+If there is anything missing or incorrect please contact me.
+Below is a study plan for the midterm.
+
 # Midterm study plan
 
 Here is a study plan for the midterm exam. This study plan includes reading material, exercise topics and flashcards for memorization. This study plan does not include a studying schedule, because this is something that differs from person to person.
