@@ -1,6 +1,7 @@
 # Read me
 This repository contains
-- a cheat sheet that can be used during the midterm exam
+- a cheat sheet PDF that can be printed and used during the midterm exam
+- cheat sheet LaTeX file that can be used to customize the cheat sheet to your own needs
 - flashcard that can be used to memorize material for the midterm exam
 
 If there is anything missing or incorrect please contact me.
