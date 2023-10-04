@@ -67,7 +67,7 @@ k-shingle (or k-gram);Sequence of k tokens that appears in the documents (tokens
 Shingling;Converts documents to sets
 Min-hashing;Converts large sets to short signatures, while perserving similarity
 Locality-Sensitive Hashing;Focuses on pairs of signatures likely to be from similar documents (candidate pairs)
-Data Preparation;The process of cleaning and transforming raw data prior to precessing and analysis
+Data Preparation;The process of cleaning and transforming raw data prior to processing and analysis
 Handling Missing Data;Ignore, Fill in (manually, automatically (global constant, mean, etc.))
 Noisy Data;Data with random error or variance in a measured variable
 Handling Noisy Data;Binning, Regression, Clustering, Combined computer and human inspection
