@@ -142,7 +142,7 @@ Boyce Codd Normal Forme (BCNF) & Relation is in 3NF and for functional dependenc
 String similarity       &                                                                                                                                                       \\ \hline
 Levenshtein distance    & Minimum number of   single-character edits required to change one string into the other                                                               \\
 Jaro Similarity         & $JaroSim(S1,S2)=\frac{1}{3}(\frac{C}{S1}+\frac{C}{S2}+\frac{C-T}{C})$,   C=number of common characters, T=number of transpositions/2, S1 and S2 =   respective lengths of the strings \\
-Jaro-Winkler Similarity & $Jw(S1,S2)=JaroSim*P*L*(1-JaroSim)$,P=Scaling   factor (0.1 default), L=length of common prefix up to maximum 4                                         \\
+Jaro-Winkler Similarity & $Jw(S1,S2)=JaroSim+P*L*(1-JaroSim)$,P=Scaling   factor (0.1 default), L=length of common prefix up to maximum 4                                         \\
 Soundex                 & Phonetic algorithm that indexes names by their sounds when pronounced in  English                                                                    
 \end{tabular}%
 }
