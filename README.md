@@ -1,13 +1,19 @@
 # Read me
-This repository contains
-- a cheat sheet PDF that can be printed and used during the midterm exam
-- cheat sheet LaTeX file that can be used to customize the cheat sheet to your own needs
-- flashcard that can be used to memorize material for the midterm exam
+This repository contains files for the midterm exam and the final exam
+- Final exam
+    - flashcards that can be used to memorize material for the final exam
+    - _I will try to make another cheat sheet for the final if it is allowed_
+- Midterm exam
+    - a cheat sheet PDF that can be printed and used during the midterm exam
+    - cheat sheet LaTeX file that can be used to customize the cheat sheet to your own needs
+    - flashcards that can be used to memorize material for the midterm exam
 
 If there is anything missing or incorrect please contact me.
-Below is a study plan for the midterm.
+Below are study plans for the final and the midterm.
 
-# Midterm study plan
+# Final exam study plan
+_TO DO_
+# Midterm exam study plan
 
 Here is a study plan for the midterm exam. This study plan includes reading material, exercise topics and flashcards for memorization. This study plan does not include a studying schedule, because this is something that differs from person to person.
 
