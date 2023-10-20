@@ -1,0 +1,107 @@
+﻿Front;Back
+ML definition;Learns from experience E with respect to task T and performance measure P
+Supervised learning;learn a model from labeled training data, then make predictions
+Unsupervised learning;explore the structure of the data to extract meaningful information
+Reinforcement Learning;develop an agent that improves its performance based on interactions with the environment
+Mean Squared Error (MSE);1/n∑(y-ŷ)^2
+Root Mean Squared Error (RMSE);√MSE
+Mean Absolute Error (MAE);1/n∑|y-ŷ|
+Median Absolute Error (mAE);median|y-ŷ|
+Proportion of variance explained (R^2);correlation(y,ŷ)^2
+Bias-variance tradeoff;A model with more flexibility (or complexity or capacity) will be less biased, but will have more variance
+Model complexity ;"Amount of information in data absorbed into the model; Amount of compression performed on data by the model; Number of effective parameters, relative to the effective degrees of freedom in data;"
+Training data;Observations used to train/fit/esitmate the model
+Validation data;New observations from the same source as the training data used several times to select model complexity
+Test data;New observations from the intended prediction situation
+Drawbacks of train/dev/test;"Validation estimate of the test error can be highly variable depending on the train/dev split; Validation set error may overestimate the test error for the model fit on the entire data set."
+Cross-validation;Divides the training data into multiple folds to perform different train/dev splits
+Common Task Framework;"A public dataset; a group of competitors; a scoring referee; (example: Kaggle)"
+Reducible error;The error that can be reduced by improving the accuracy of the model
+Irreducible error;The error that can not be reduced. This is error variance that can't be predicted by any model
+Parametric method for modeling;"2 step process: asume the form/shape of the function; Find the best fit"
+Non-parametric method for modeling;Does not make assumptions about the form/shape of the function, but seeks an estimate that gets as close to the data points as possible
+Overfitting ;The model gets so close to the datapoints that it follows the errors/noise too closely
+Underfitting;The model doesn't get close enough to the datapoints that it doesn't estimate the true function close enough
+Classification;Predicting a discrete outcome
+k Nearest Neighbours (kNN) Classification;Classifies datapoints based on a majority vote of the k points closest to it
+Tree based classification (decision tree);"Learns decision rules inferred from the data; Each condition has two possible outcomes; Tree is formed by recursive partitioning."
+Recursive partitioning;"1. Find the split that makes observations as similar as possible on the outcome within that split; 2. Within each resulting group, do 1."
+Random forest model;"Create many trees that are too complex (low bias, high variance); Average over bootstrapped samples to cancel out the overfitting parts."
+Boosting;"Create many trees that are too simple (high bias, low variance); Make more of them for observations with big residuals; Average them."
+Hyperparameter;A parameter that is not learned by the model, but is used to control the learning process.
+Confusion matrix;A matrix with the predicted and observed outcomes. Shows True Negative, False Negative, True Positive, False Positive.
+Total error from confusion matrix;FP + FN
+Specificity from confusion matrix;TN / (TN + FP)
+Sensitivity / Recall from confusion matrix;TP / (TP + FN)
+Accuracy from confusion matrix;(TP + TN) / (TP + FP + TN + FN)
+Error rate from confusion matrix;1-Accuracy
+Negative Predicted Value (NPV) from confusion matrix;TN / (TN + FN)
+Positive Predicted Value (PPV) / Precision from confusion matrix;TP / (TP + FP)
+F₁ score from confusion matrix;"Harmonic mean of precision and recall; F₁ = √(precision*recall)"
+Receiver Operating Characteristics curve (ROC curve) from confusion matrix;Plot of the True Postive Rate (TPR) against the False Positive Rate (FPR), at various threshold settings.
+Area Under The (ROC) Curve (AUC);The overall performance of a classifier summarized over all possible thresholds. An ideal ROC curve will hug the top left corner, so the larger the AUC the better the classifier.
+Probability in Classifier Models;Ideally the classification model outputs a probability (not just 0 or 1, but the probability it will be 0 or 1)
+Calibration plot;Plots the observed proportion against the predicted probability. Ideally the values for observed and predicted align.
+Post hoc probability calibration;Tweak predicted probabilities so they fit on the curve of the calibration plot
+Class imbalance;When at least one class has very few observations
+Neural network;A subset of machine learning, name and structure is inspired by the human brain
+Deep learning;Applying neural networks with multiple hidden layers
+Universal function approximation theorem;Any “well-behaved” function can be represented by neural net of sufficient width and sufficient depth with nonlinear activation function
+Hidden layers;Layers between the input and output layers inside a neural network
+Layer width;Amount of neurons/nodes in a layer
+Layer depth;Amount of layers inside the neural network
+Feed-forward neural network;Unidirectional flow, the information flows only in one direction: from the input to the output
+Activation function;Applies non-linearity to output of each neuron. Enables the model to approximate complex non-linear relationships and introduce a threshold or decision boundary
+Sigmoud function;Converts linear functions to values in a range between 0 and 1
+Rectified Linear Unit (ReLU);Outputs 0 when x is below 0, else it outputs x (f(x) = max(0,x))
+Formula for each neuron;hk(x) = g(W0k + ∑ Wpk xp) . Where g is the activation function, W0k is the bias for neuron k, Wpk is the weight for the previous output p for neuron k, xp is the previous output p.
+Softmax function;Transforms the raw outputs of a neural network into a vector of probabilities
+Convolutional Neural Networks (CNN);Neural Network designed for processing visual data. Applies a kernal (filter) over an image which decides which feature is important in the image.
+Convolution Layer;The parameters/weight in a convolution layer are the elements of the filter
+Pooling layer;Reduces dimensionality by condensing a larger image into a smaller summary image
+Data augmentation;Replicate training images and distort them in natural ways. Creates more training data.
+Recurrent Neural Networks (RNN);A neural network where the input is a sequence
+Loss function;Quantifies model performance. For continuous outcomes squared error can be used, for binary outcomes binary cross-entropy can be used.
+Binary cross-entropy;Quantifies the difference between predicted probabilities and actual binary labels
+Local minimum loss;A point in the parameter space where the loss function reaches its lowest value within a specific region
+Global minimum loss;The lowest point in the entire parameter space where the loss function reaches its minimum value
+Gradient;The direction in which we need to move to decrease loss
+Gradient descent;An iterative process to find the minimum loss by taking steps in the direction where loss decreases
+Learning rate;Affects how big of a step (magnitude of parameter update) can be taken for each loss optimization iteration
+Backpropogation;Calculates the gradient of the loss with respect to the model's parameters by starting at the output layer and working backwards through the network
+Stachastic gradient descent;Instead of calculating gradients with respect to the entire loss function, only use a random batch of data
+Epoch;The amount of looks at the full data
+Regularization;Introduces bias in the parameters to improve generalization. Fights dimensionality and overfitting
+Early stopping;Do not train for more epochs but stop when loss does not improve
+Dropout regularization;For loss optimization: In each iteration, only update a subset of parameters
+Why missing data is important;"1. It's annoying; 2. Less information causes uncertainty; 3. Systemic biases: estimates of interest wrong on average, prediction error seems better than reality"
+Not Data Dependent (NDD);It is missing for reasons unrelated to the data. Probability to be missing is consistent for all units
+Seen Data Dependent (SDD);It is missing for reasons related to data you have got. Probability to be missing depends on observed data
+Unseen Data Dependent (UDD);It is missing because of values you would have obtained. Probability to be missing depends on unobserved data
+Data imputation;Replacing missing values with guessed values
+Deductive imputation;Values can be derived based on logical or mathematical relationships between variables (e.g. BMI can be derived by only knowing weight and height)
+Listwise deletion;"Deleting all rows where data is missing. Advantages: simple, unbiased under NDD; Disadvantages: large loss of information, biased under SDD and UDD"
+Mean imputation;"Replacing missing values with the mean of the observed data. Advantages: simple, unbiased for the mean under NDD; Disadvantages: Doesn't work"
+Regression imputation;"Replace missing values by prediction from a regression on the observed data. Advantages: Unbiased estimate of regression coefficients under SDD, Good approximation of the true data if explained variance is high, The better the prediction the better the approximation; Disadvantages: Artificially increases correlations, underestimates prediction error and the uncertainty, p-values to optimistic and confidence intervals too narrow"
+Stochastic regression imputation;"Like regression imputation but adds noise to the predictions to reflect uncertainty. Advantages: Perserves the distribution and correlation; Disadvantages: fiddly, single imputation does not take uncertainty imputed data into account and treats them as real"
+Last Observation Carried Forward (LOCF);If a datapoint is missing it is replaced by the last observe value.
+"""Embedded"" methods for missing values (model based)";"Don't impute but the (prediction) model deals with the missing data inside the model itself. Depends on the model; Almost always assumes SDD"
+Multiple Imputation;Fixes the incorrect estimate of the standard error. Stochastic imputation but create multiple datasets and pool results. The overall estimate is the average of the estimates
+Clustering;A broad set of unsupervised learning techniques to find groups or categories within the data
+Hierarchical clustering;Builds a hierarchy of clusters (i.e. groups within groups)
+Agglomerative Hierarchical clustering;Assign all examples to their individual cluster, Combine most similar clusters, keep combining clusters until there is only one cluster left, select number of clusters for the final solution
+Divisive Hierarchical clustering;Start with one cluster and keep splitting most different until individual examples are left
+Dendrogram;A tree-like visual representation of the cluster hierarchy
+Average linkage;Calculate all pairwise distances between observations in cluster A and observations in cluster B, record the average intercluster distance
+Complete linkage;Calculate all pairwise distances between observations in cluster A and observations in cluster B, record the largest intercluster distance
+Single linkage;Calculate all pairwise distances between observations in cluster A and observations in cluster B, record the smallest intercluster distance
+Centroid linkage;Distance between the centroid of cluster A and the centroid of cluster B
+Scaling for clustering;It is generally a good idea to scale features before clustering otherwise the distance computation might favor features incorrectly in the distance calculation (e.g. meters will look closer than centimeters)
+Different distance meanings;"Continuous (Euclidean, maximum, Manhattan, Minkowski, …), Time Series (""Dynamic time warping"", Fréchet, cross-corr., wavelets, …), Networks (Modularity, Shortest path, …), Text/DNA (Edit distance, Hamming distance, TF-IDF distance, …), Images (""Structural similarity"", GAN loss, ...)"
+Partitional clustering;Clusters the dataset into non-hierarchical clusters, the amount of clusters that will be found is given by the user beforehand
+k-means clustering algorithm;"1. Randomly assign examples to k clusters; 2a. Calculate the centroid for each cluster; 2b. Assign each example to the cluster belonging to its closest centroid; 3. If the assignments changed, go to step 2a, else stop."
+Clustering evaluation methods;"Use of external validation; Visual exploration; Stability assessment / Sensitivity analysis; Internal validation indexes"
+External validation of clusters;Are clusters associated with external feature y?
+Visual exploration for cluster validation;Make a visual inspection to see if the clusters look correct. Impossible to see with many variables, possible to reduce variables to 2D for visual inspection (e.g. UMAP, t-SNE, MDS, Discriminant Coordinates, PCA)
+Stability assessment for cluster validation;How much does clustering change when changing some hyperparameters, observations, features
+Internal validation indices;"Look at the data and clusters and quantify how ""successful"" the clustering is by some measure (e.g. Average Silhouette Width (ASW), ""Gap statistic"", …)"
