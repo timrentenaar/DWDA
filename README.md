@@ -12,7 +12,31 @@ If there is anything missing or incorrect please contact me.
 Below are study plans for the final and the midterm.
 
 # Final exam study plan
-_TO DO_
+
+Here is a study plan for the final exam. This study plan includes reading material, exercise topics and flashcards for memorization. This study plan does not include a studying schedule, because this is something that differs from person to person.
+
+### Reading material
+ - Lecture Slides
+ - ISLR: 4.1-4.4.2, 5.1, 8.1-8.2.3, 10, 12.1, 12.4
+ - DLBK: 10
+ - FIMD: 1.1-1.4
+ - SLP3: 2.1, 2.4, 6.2, 6.3, 6.5, 6.8
+ - TTMR: 3
+ - OMNG: pages 265-294
+ - MMDS: 4.1 – 4.4
+ - Oberski (2016)
+ - Hennig (2016)
+ - Bouveyron et al. (2019)
+ - Mehrabi et al. (2021)
+
+### Practical exercises
+ - ISLR, FIMD, SLP3, MMDS each contain exercises
+     - I have found some answers to the ISLR exercises online, I am not sure how reliable these answers are. Use at your own discretion. https://blog.princehonest.com/stat-learning/
+ - Labs
+
+### Memorization
+Some key information can be memorized using the provided flashcards
+
 # Midterm exam study plan
 
 Here is a study plan for the midterm exam. This study plan includes reading material, exercise topics and flashcards for memorization. This study plan does not include a studying schedule, because this is something that differs from person to person.
