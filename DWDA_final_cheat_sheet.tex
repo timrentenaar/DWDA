@@ -237,7 +237,7 @@ Data Wrangling \& Data Analysis final Cheat Sheet  - Created by Tim Rentenaar
 \textbf{Sampling data from data streams}: Since we cannot store the entire stream, one obvious approach is to store a sample\\
 \textbf{Sample a fixed proportion of a stream}: Each input has a probability to be sampled equal to the proportion (i.e. if we store 1/10 of a stream each input has 1/10 chance to be sampled). Problem: when the stream is infinite, the sample size is also infinite.\\
 \textbf{Sample a fixed size of a stream}: Suppose we need to maintain a random sample S of size exactly s tuples (examples).\\
-\textbf{Reservoir Sampling}: Store the first s elements of the stream to S; When nth element arrives and n > s, with probability s/n keep the nth element else discard it; If we picked the nth element, then it replaces one of the s elements in the sample S, picked uniformly at random.\\
+\textbf{Reservoir Sampling}: Store the first s elements of the stream to S; When nth element arrives and $n > s$, with probability s/n keep the nth element else discard it; If we picked the nth element, then it replaces one of the s elements in the sample S, picked uniformly at random.\\
 \textbf{Windowing models for stream processing}: Keep the n most recent elements\\
 \textbf{Sliding window}: Upon the arrival of a new item from the stream, discard the oldest item\\
 \textbf{Tumbling window (disjoint windows)}: Upon the arrival of a new batch of items of size n, discard the previous batch\\
