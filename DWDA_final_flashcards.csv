@@ -126,7 +126,7 @@ Merging components to get clusters;"GMM has trouble with clusters that aren't el
 Text mining;The process of transforming unstructured text into structured data for easy analysis
 Regular expressions (regex);A language for specifying text search strings (used for e.g. extracting emails, validating inputs, reformatting dates, etc.)
 Text normalization;Converting text to a more convenient, standard form
-Tokenization;Seperating out words from running tekst
+Tokenization;Seperating out words from running text
 Lemmatization;The task of determining two words have the same root, despite their surface differences. (e.g. the words sings, sang, sung are forms of the verb sing. The word sing is the common lemma, and a lemmatizer maps these words to sing.)
 Stemming;Refers to a simpler form of lemmatization  in which we mainly just strip suffixes from the end of words
 Sentence segmentation;Breaking up a text into individual sentences, using clues like periods or exclamation points.
@@ -194,13 +194,13 @@ Hopping window;Upon the arrival of a new step  m of items, discard the oldest m 
 Exponentially decaying windows;"Main idea: every item in the stream is important; different levels of importance; recent values are more important;"
 Querying Data Streams examples;Filtering, Counting distinct elements, Estimating moments, Finding frequent elements
 Filtering Data Steams;Given a set of keys S, Determine which tuples in the stream are in S. Obvious solution: Hash Table. Problem: We may not have enough memory.
-Bloom filters;-
+Bloom filters;A Bloom filter is a space-efficient probabilistic data structure that is used to test whether an element is a member of a set. The price we pay for efficiency is that it is probabilistic in nature that means, there might be some False Positive results.
 Counting Distinct Elements of Data Streams;Obvious approach: maintain a hashtable of all the distinct elements seen so far. What if we don't have enough storage for the hash table? Estimate the count.
 Flajolet-Martin Approach;"Pick a hash function h that maps each of the N elements to at least log2(N) bits; For each stream element a, let r(a) be the number of trailing 0s in h(a); Record R = the maximum r(a) seen; Estimated number of distinct elements = 2^R;"
-Hoeffding Tree (HT);-
-Very Fast Decision Tree (VFDT);-
-Clustering Data Streams;-
-CluStream;-
+Hoeffding Tree (HT);When a new sample arrives, the Hoeffding tree compares attributes and decides which attribute to split the data on based on the statistical significance of the observed differences in these attributes. If the differences are not significant enough to confidently choose the best attribute, more data will be collected. This adaptive nature allows the tree to incrementally improve itself as it receives more information.
+Very Fast Decision Tree (VFDT);Similar to Hoeffding trees but: near-ties are broken more aggressively, deactivates certain leaves to save memory, poor attributes dropped. Better time and memory.
+Clustering Data Streams;"Input: Data stream points from metric space; Goal: Find k clusters in the stream (based on k-median algorithm); Constant factor approximation algorithm;"
+CluStream;"Divide the clustering process into online and offline components. Online component: stores summary statistics about the stream data; Offline component: answers various user questions based on the stored summary statistics;"
 Limitation of classification accuracy measure;The problem of imbalanced classes (e.g. 2-classes class 1 has 99 observations and class 2 has 1 observation, if the model predicts everything as class 1 it has a 99% accuracy)
 Methods to overcome imbalanced data;"Collect more data; Delete data from majority class; Create synthetic data; Adapt your learning algorithm;"
 Random oversampling;Randomly duplicate datapoints from the minority class. Problem: overfitting and fixed boundaries.
