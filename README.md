@@ -1,8 +1,9 @@
 # Read me
 This repository contains files for the midterm exam and the final exam
 - Final exam
+    - a cheat sheet PDF that can be printed and used during the final exam (please note that I was unable to fit all info on the cheat sheet so some things might be missing)
+    - cheat sheet LaTeX file that can be used to customize the cheat sheet to your own needs
     - flashcards that can be used to memorize material for the final exam
-    - _I will try to make another cheat sheet for the final if it is allowed_
 - Midterm exam
     - a cheat sheet PDF that can be printed and used during the midterm exam
     - cheat sheet LaTeX file that can be used to customize the cheat sheet to your own needs
