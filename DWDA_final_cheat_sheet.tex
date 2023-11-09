@@ -221,11 +221,11 @@ Data Wrangling \& Data Analysis final Cheat Sheet  - Created by Tim Rentenaar
 
 \begin{boxA}
 \underline{\textbf{Time Series: Forecasting}}\\
-\textbf{Naive forecasting}: Next period's forecast = previous period's actual. $\hat{y}_{t-1} = y_t$\\
+\textbf{Naive forecasting}: Next period's forecast = previous period's actual. $\hat{y}_{t+1} = y_t$\\
 \textbf{Simple mean forecasting}: Next period's forecast = average of previously observed data\\
 \textbf{Moving average forecasting}: Next period's forecast = simple average of the last k periods\\
 \textbf{Weighted moving average forecasting}: Next period's forecast = weighted average of the last k periods, where each period is assigned a weight\\
-\textbf{Exponential smoothing forecasting}: Next period’s forecast = weighted average of the previous reading and the history, calculated with the previously stated exponential smoothing formula\\
+\textbf{Exponential smoothing forecasting}: Next period’s forecast = weighted average of the previous reading and the history. $\hat{y}_{t+1} = \alpha y_t + (1-\alpha)\hat{y}_t$\\
 \textbf{Forecast accuracy}: Tests of forecast accuracy are based on the difference between the forecast of the variables’ values at time t and the actual value at the same time point t\\
 \textbf{Tracking Signal}: $TS = \frac{\sum_{t=T_1}^T (y_t - \hat{y}_t)}{MAE}$
 \end{boxA}
@@ -242,10 +242,10 @@ Data Wrangling \& Data Analysis final Cheat Sheet  - Created by Tim Rentenaar
 \textbf{Sliding window}: Upon the arrival of a new item from the stream, discard the oldest item\\
 \textbf{Tumbling window (disjoint windows)}: Upon the arrival of a new batch of items of size n, discard the previous batch\\
 \textbf{Hopping window}: Upon the arrival of a new step  m of items, discard the oldest m items. When m=1 the hopping window is a sliding window. When m=n the hopping window is a tumbling window.\\
-\textbf{Exponentially decaying windows}: Main idea: every item in the stream is important; different levels of importance; recent values are more important;\\
+\textbf{Exponentially decaying windows}: Every item in the stream is important; Recent values are more important; $\sum_{i=0}^{t-1} a_{t-i} (1-c)^i$\\
 \textbf{Querying Data Streams examples}: Filtering, Counting distinct elements, Estimating moments, Finding frequent elements\\
 \textbf{Filtering Data Steams}: Given a set of keys S, Determine which tuples in the stream are in S. Obvious solution: Hash Table. Problem: We may not have enough memory.\\
-\textbf{Bloom filters}: A Bloom filter is a space-efficient probabilistic data structure that is used to test whether an element is a member of a set. The price we pay for efficiency is that it is probabilistic in nature that means, there might be some False Positive results.\\
+\textbf{Bloom filters}: A Bloom filter is a space-efficient probabilistic data structure that is used to test whether an element is a member of a set. The price we pay for efficiency is that it is probabilistic in nature that means, there might be some False Positive results. Probability of a FP: $p_h = (1-e^{-\frac{kM}{N}})^k$\\
 \textbf{Counting Distinct Elements of Data Streams}: Obvious approach: maintain a hashtable of all the distinct elements seen so far. What if we don't have enough storage for the hash table? Estimate the count.\\
 \textbf{Flajolet-Martin Approach}: Pick a hash function h that maps each of the N elements to at least $log_2(N)$ bits; For each stream element a, let r(a) be the number of trailing 0s in h(a); Record R = the maximum r(a) seen; Estimated number of distinct elements = $2^R$;\\
 \textbf{Hoeffding Tree (HT)}: When a new sample arrives, the Hoeffding tree compares attributes and decides which attribute to split the data on based on the statistical significance of the observed differences in these attributes. If the differences are not significant enough to confidently choose the best attribute, more data will be collected. This adaptive nature allows the tree to incrementally improve itself as it receives more information.\\
@@ -260,7 +260,7 @@ Data Wrangling \& Data Analysis final Cheat Sheet  - Created by Tim Rentenaar
 \textbf{Methods to overcome imbalanced data}: Collect more data; Delete data from majority class; Create synthetic data; Adapt your learning algorithm;\\
 \textbf{Random oversampling}: Randomly duplicate datapoints from the minority class. Problem: overfitting and fixed boundaries.\\
 \textbf{Random under-sampling}: Randomly delete datapoints from the majority class. Problem: loss of information\\
-\textbf{Synthetic Minority Over-Sampling Tecnique (SMOTE)}: Create new datapoints from the minority class by selecting a random datapoint along the line between two known datapoints of the minority class. Problem: might introduce the artificial minority class examples too deeply in the majority class space.\\
+\textbf{Synthetic Minority Over-Sampling Technique (SMOTE)}: Create new datapoints from the minority class by selecting a random datapoint along the line between two known datapoints of the minority class. Problem: might introduce the artificial minority class examples too deeply in the majority class space.\\
 \textbf{Generative Adversarial Networks (GANs)}: System of two neural networks competing against each other, a generator and a discriminator. Generator improves based on the feedback of the discriminator.\\
 \textbf{InfoGAN}: Approximate the data distribution and learn interpretable, useful vector representations of data.\\
 \textbf{Conditional GANs (CTGAN)}: Able to generate samples taking into account external information (class label, text, another image). Force G to generate a particular type of output.\\
@@ -270,7 +270,7 @@ Data Wrangling \& Data Analysis final Cheat Sheet  - Created by Tim Rentenaar
 \textbf{Bias in data}: Historical bias in the decision variable; Limited / less informative features; Biased data collection; Imbalanced representation of different demographic groups;\\
 \textbf{Fairness}: “Fairness is the absence of any prejudice or favoritism towards an individual or a group based on their intrinsic or acquired traits in the decision-making context”\\
 \textbf{Equality}: Everyone benefits from the same supports.\\
-\textbf{Equity}: Everyone gets the support the need.\\
+\textbf{Equity}: Everyone gets the support they need.\\
 \textbf{Justice}: The cause(s) of the inequity was adressed.\\
 \textbf{Demographic Parity (DP) Difference}: The instances in both protected (unprivileged) and unprotected (privileged) groups should have equal probability to receive positive outcomes. This measure takes values between 0 and 1 where 0 is the optimal.\\
 \textbf{Disparate Impact (DI) Ratio}: The ratio between the probability of protected and unprotected groups getting positive or desired outcomes.A dataset or a classifier is considered fair (by law) if its DI-ratio is between 0.8 and 1.25 (1 is the optimal)\\
@@ -284,6 +284,7 @@ Data Wrangling \& Data Analysis final Cheat Sheet  - Created by Tim Rentenaar
 \end{boxA}
 
 Data Wrangling \& Data Analysis final Cheat Sheet  - Created by Tim Rentenaar
+
 
 \end{multicols}
 
